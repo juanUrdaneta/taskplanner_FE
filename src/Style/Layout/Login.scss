@@ -1,2 +1,21 @@
-.Login {
+.login {
+  background-color: #c4c4c4;
+  font-size: 3rem;
+  //
+  //
+  //
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+  width: 30vw;
+  margin: 0 auto;
+  height: 40vh;
+  top: 30vh;
+
+  & > input[type="text"] {
+    margin: 3rem 0rem 5rem 0rem;
+  }
 }

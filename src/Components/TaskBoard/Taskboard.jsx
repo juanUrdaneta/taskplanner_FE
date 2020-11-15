@@ -12,8 +12,7 @@ const TEST = [
 
 function Taskboard(props) {
   return (
-    <div>
-      <nav className="navbar">NAV</nav>
+    <div className="taskboard">
       <Bucket />
       <Bucket />
       <Bucket />

@@ -1,0 +1,13 @@
+.taskboard {
+  //
+  //
+
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 90%;
+  overflow-y: hidden;
+
+  display: flex;
+
+  background-color: $--color-black;
+}

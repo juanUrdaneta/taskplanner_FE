@@ -9,9 +9,10 @@ function App() {
   return (
     //HTML
     <div className="App">
+      <nav className="navbar">NAV</nav>
       <Switch>
+        <Route path="/login" component={Login} />
         <Route path="/" component={Taskboard} />
-        {/* <Route path="/" component={Login} /> */}
       </Switch>
     </div>
   );

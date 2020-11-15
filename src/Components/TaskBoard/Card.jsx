@@ -2,7 +2,7 @@ import React from "react";
 
 const TEST = {
   name: "Task 1",
-  description: "This is the task description",
+  tags: ["one", "two"],
   status: "In Progress",
 };
 
@@ -10,8 +10,14 @@ function Card(props) {
   return (
     <div className="card">
       <h1 className="card__name">{TEST.name}</h1>
-      <p className="card__description">{TEST.description}</p>
-      <div className="card__bottom">
+      <div className="card__tags margin-top-small">
+        {TEST.tags.map((tag) => (
+          <div className="card__tag">
+            <p>{tag}</p>
+          </div>
+        ))}
+      </div>
+      <div className="card__bottom margin-top-small">
         <p className="card__status">{TEST.status}</p>
         <div className="card__shortcuts">
           <div className="delete">

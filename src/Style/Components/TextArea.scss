@@ -1,0 +1,21 @@
+.app_textarea {
+  border: none;
+  outline: none;
+
+  border-radius: 0rem;
+  width: 70%;
+  padding: 1.5rem 1rem;
+
+  color: $--color-black;
+  font-size: 1.7rem;
+  border-bottom: 0.1rem solid $--color-grey;
+  border: 0.1rem solid $--color-black-light;
+
+  &:focus {
+    border: 0.1rem solid $--color-yellow;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}

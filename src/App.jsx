@@ -8,7 +8,9 @@ function App() {
   return (
     //HTML
     <div className="App">
-      <Route path="/" component={Login} />
+      <Switch>
+        <Route path="/" component={Login} />
+      </Switch>
     </div>
   );
 }

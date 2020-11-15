@@ -1,6 +1,6 @@
 .login {
   background-color: #c4c4c4;
-  font-size: 3rem;
+  border-radius: 0.5rem;
   //
   //
   //
@@ -12,10 +12,16 @@
   position: relative;
   width: 30vw;
   margin: 0 auto;
-  height: 40vh;
+  padding: 5rem 0;
   top: 30vh;
 
-  & > input[type="text"] {
-    margin: 3rem 0rem 5rem 0rem;
+  // & > input[type="text"],
+  // & > input[type="password"] {
+  //   margin: 0rem 0rem 0rem 0rem;
+  // }
+
+  & > button {
+    margin-top: 4rem;
+    width: 70%;
   }
 }

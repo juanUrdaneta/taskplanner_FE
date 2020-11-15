@@ -3,9 +3,9 @@ import React from "react";
 function Login(props) {
   return (
     <div className="login">
-      <input type="text" />
-      <input type="text" />
-      <button>Log in</button>
+      <input className="app_input" placeholder="Usuario" type="text" />
+      <input className="app_input" placeholder="Contraseña" type="password" />
+      <button className="app_button">Log in</button>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.app_button {
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: #fdfdfd;
+  border: 0.1rem solid gray;
+  background-color: #303030;
+  transition: 100ms all;
+  &:active {
+    background-color: rgba(30, 30, 30, 0.5);
+  }
+}

@@ -1,9 +1,6 @@
 .login {
   background-color: $--color-black-light;
   border-radius: 0.5rem;
-  //
-  //
-  //
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,14 +8,8 @@
 
   position: relative;
   width: 30vw;
-  // margin: 0 auto;
   padding: 5rem 0;
   top: 30vh;
-
-  // & > input[type="text"],
-  // & > input[type="password"] {
-  //   margin: 0rem 0rem 0rem 0rem;
-  // }
 
   & > button {
     margin-top: 4rem;

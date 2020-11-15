@@ -16,4 +16,8 @@
   &:focus {
     border: 0.1rem solid $--color-yellow;
   }
+
+  &--full-width {
+    width: 100%;
+  }
 }

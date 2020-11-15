@@ -5,7 +5,7 @@ function Login(props) {
     <div className="login">
       <input className="app_input" placeholder="Usuario" type="text" />
       <input className="app_input" placeholder="Contraseña" type="password" />
-      <button className="app_button">Log in</button>
+      <button className="app_button app_button--teal">Log in</button>
     </div>
   );
 }

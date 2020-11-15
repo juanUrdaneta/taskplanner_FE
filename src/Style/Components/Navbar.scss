@@ -1,0 +1,47 @@
+.navbar {
+  z-index: 2;
+  height: 5rem;
+  width: 100vw;
+  flex: 0 0 auto;
+  background-color: $--color-teal;
+  box-shadow: 2rem 0 2rem $--color-black;
+  font-size: 2rem;
+
+  &__content {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    & > h1 {
+      user-select: none;
+      color: $--color-black;
+      font-size: 3rem;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    & > h1 {
+      user-select: none;
+      color: $--color-black;
+      font-size: 2rem;
+      transition: 200ms color;
+
+      &:hover {
+        color: $--color-yellow;
+      }
+      &:active {
+        color: $--color-yellow-dark;
+      }
+    }
+  }
+}

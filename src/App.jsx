@@ -11,10 +11,15 @@ export const TaskContext = React.createContext();
 
 function App() {
   const [isPreviewOpened, setIsPreviewOpened] = useState(false);
-  // const [user, setUser] = useState({});
+  const [tasks, setTasks] = useState([]);
+
+  const cSetTasks = (arg) => setTasks(arg);
+
   const taskContext = {
-    isPreviewOpened: isPreviewOpened,
-    setIsPreviewOpened: setIsPreviewOpened,
+    isPreviewOpened,
+    setIsPreviewOpened,
+    tasks,
+    setTasks: cSetTasks,
   };
   return (
     <TaskContext.Provider value={taskContext}>

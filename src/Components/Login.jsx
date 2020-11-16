@@ -1,13 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { TaskContext } from "../App.jsx";
 import { logUser } from "../Requests/authentication.js";
-import { formatUser } from "../utils/misc";
 import catchAsync from "../utils/catchAsyncMethod";
 
 function Login(props) {
   const history = useHistory();
-  const { user, setUser } = useContext(TaskContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,7 +13,6 @@ function Login(props) {
     console.log(response);
     if (response.status === "success") {
       sessionStorage.setItem("jwt", response.data.token.toString());
-      console.log(user, response.data.data);
       history.push("/taskboard");
     }
   });

@@ -1,22 +1,17 @@
 import React from "react";
+import TaskPreview from "../Taskpreview";
 import Bucket from "./Bucket";
-
-const TEST = [
-  { name: "CARD 1" },
-  { name: "CARD 1" },
-  { name: "CARD 1" },
-  { name: "CARD 1" },
-  { name: "CARD 1" },
-  { name: "CARD 1" },
-];
 
 function Taskboard(props) {
   return (
-    <div className="taskboard">
-      <Bucket />
-      <Bucket />
-      <Bucket />
-    </div>
+    <>
+      <TaskPreview />
+      <div className="taskboard">
+        <Bucket />
+        <Bucket />
+        <Bucket />
+      </div>
+    </>
   );
 }
 

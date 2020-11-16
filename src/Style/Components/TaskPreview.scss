@@ -1,0 +1,83 @@
+.taskpreview {
+  z-index: 2;
+
+  top: 10vh;
+  position: fixed;
+  width: 35vw;
+  height: 80vh;
+  padding: 3rem;
+  overflow: hidden;
+  transition: 200ms height;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 1rem;
+  background-color: $--color-white;
+  box-shadow: 0.5rem 0.5rem 0.5rem $--color-black;
+
+  &__close {
+    user-select: none;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    & > span {
+      font-size: 4rem;
+      transition: 200ms transform;
+      &:hover {
+        transform: translateY(-0.2rem);
+      }
+      &:active {
+        transform: translateY(-0.1rem) scale(0.95);
+      }
+    }
+  }
+
+  &__edit {
+    width: 70%;
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__description {
+    width: 70%;
+    height: 60%;
+    overflow-y: scroll;
+    &__text {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__bottom {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+
+    &__right {
+      & > button {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &--is-hidden {
+    padding: 0rem 3rem;
+    height: 0;
+  }
+}
+
+.screencover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(30, 30, 30, 0.5);
+
+  &--is-hidden {
+    display: none;
+  }
+}

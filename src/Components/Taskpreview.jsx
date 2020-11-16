@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { TaskContext } from "../App";
 
 const TEST = {
   name: "Task 1",
@@ -9,18 +10,26 @@ const TEST = {
 };
 
 function TaskPreview(props) {
+  const [tags, setTags] = useState(TEST.tags.join(","));
   const [isPreviewing, setIsPreviewing] = useState(false);
-  const [isShowing, setIsShowing] = useState(false);
+  const { isPreviewOpened, setIsPreviewOpened } = useContext(TaskContext);
 
   return (
     <>
       <div
-        className={`screencover ${isShowing ? "" : "screencover--is-hidden"} `}
+        className={`screencover ${
+          isPreviewOpened ? "" : "screencover--is-hidden"
+        } `}
       ></div>
       <div
-        className={`taskpreview ${isShowing ? "" : "taskpreview--is-hidden"}`}
+        className={`taskpreview ${
+          isPreviewOpened ? "" : "taskpreview--is-hidden"
+        }`}
       >
-        <div className="taskpreview__close" onClick={() => setIsShowing(false)}>
+        <div
+          className="taskpreview__close"
+          onClick={() => setIsPreviewOpened(false)}
+        >
           <span className="material-icons">close</span>
         </div>
         {isPreviewing ? (
@@ -55,7 +64,8 @@ function TaskPreview(props) {
               type="text"
               className="app_input margin-top-big app_input--full-width"
               placeholder="Tags"
-              value={TEST.tags.join(",")}
+              value={tags}
+              onChange={(e) => setTags(e.target.value)}
             />
           </div>
         )}

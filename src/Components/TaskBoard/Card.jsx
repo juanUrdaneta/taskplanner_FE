@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TaskContext } from "../../App";
 
 const TEST = {
   name: "Task 1",
@@ -7,8 +8,12 @@ const TEST = {
 };
 
 function Card(props) {
+  const taskContext = useContext(TaskContext);
   return (
-    <div className="card">
+    <div
+      className="card"
+      onDoubleClick={() => taskContext.setIsPreviewOpened(true)}
+    >
       <h1 className="card__name">{TEST.name}</h1>
       <div className="card__tags margin-top-small">
         {TEST.tags.map((tag) => (
